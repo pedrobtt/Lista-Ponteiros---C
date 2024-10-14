@@ -1,3 +1,5 @@
+// 12. Qual será a saída do seguinte programa
+
 #include <stdio.h>
 
 void main(){
@@ -9,4 +11,3 @@ void main(){
         2º Erro: incrementar uma variável constante.
     */
 }
-
