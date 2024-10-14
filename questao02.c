@@ -5,7 +5,7 @@ memória e que nessa arquitetura os inteiros possuem 2 bytes de tamanho */
 
 int main(){
     int i=5, *p;
-    p = &i; // supondo que i possui 4094 como endereço
+    p = &i; // Supondo que i possui 4094 como endereço
     
     printf("%p %p %d %d %d %d\n", p, p+1, *p+2, **&p, 3**p, **&p+4);
     
@@ -16,12 +16,12 @@ int main(){
     printf("3**p = %d bytes\n", sizeof(3**p));
     printf("**&p+4 = %d bytes\n", sizeof(**&p+4));
     
-    // p : retorna o endereço de i
-    // p + 1 : retorna o endereço de i + 1
-    // *p + 2 : retorna o conteúdo de i + 2    
-    // **&p : retorna para o conteúdo de i novamente
-    // 3**p : retorna o conteúde de i * 5
-    // **&p+4 : retorna para o conteúdo de i novamente + 4
+    // p : Retorna o endereço de i
+    // p + 1 : Retorna o endereço de i + 1
+    // *p + 2 : Retorna o conteúdo de i + 2    
+    // **&p : Retorna para o conteúdo de i novamente
+    // 3**p : Retorna o conteúde de i * 5
+    // **&p+4 : Retorna para o conteúdo de i novamente + 4
     
     return 0;
 }
