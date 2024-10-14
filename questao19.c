@@ -1,7 +1,11 @@
+/* 19. Implemente em linguagem C uma fun√ß√£o em um programa de computador que leia n valores do
+tipo float do teclado e os apresente em ordem crescente. Utilize aloca√ß√£o din√¢mica de mem√≥ria
+para armazenar o conjunto de pontos lidos. */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-// FunÁ„o de comparaÁ„o para o qsort
+// Fun√ß√£o de compara√ß√£o para o qsort
 int compara(const void *a, const void *b) {
     if (*(float *)a > *(float *)b) return 1;
     else if (*(float *)a < *(float *)b) return -1;
@@ -12,19 +16,19 @@ int main() {
     int n;
     float *valores;
 
-    // LÍ a quantidade de valores
-    printf("Digite o n˙mero de valores: ");
+    // L√™ a quantidade de valores
+    printf("Digite o n√∫mero de valores: ");
     scanf("%d", &n);
 
-    // Aloca dinamicamente a memÛria para armazenar os valores
+    // Aloca dinamicamente a mem√≥ria para armazenar os valores
     valores = (float *)malloc(n * sizeof(float));
 
     if (valores == NULL) {
-        printf("Erro ao alocar memÛria.\n");
+        printf("Erro ao alocar mem√≥ria.\n");
         return 1;
     }
 
-    // LÍ os valores do teclado
+    // L√™ os valores do teclado
     printf("Digite os valores:\n");
     for (int i = 0; i < n; i++) {
         printf("Valor %d: ", i + 1);
@@ -40,7 +44,7 @@ int main() {
         printf("%.2f\n", valores[i]);
     }
 
-    // Libera a memÛria alocada
+    // Libera a mem√≥ria alocada
     free(valores);
 
     return 0;
