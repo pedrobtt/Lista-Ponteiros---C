@@ -1,3 +1,5 @@
+// 15. O que será mostrado na tela pelo seguinte programa? Justifique sua resposta.
+
 #include <stdio.h>
 
 int main(){
@@ -6,9 +8,6 @@ int main(){
     printf("%u, %u, %u", x+3, *(x+3), *(x+2)+3);
 }
 
-/*
-    x+3: endereço de x[3] 
-    *(x+3): primeiro elemento da quarta linha, que é 10
-    *(x+2)+3: endreço que não corresponde um valor no array
-*/
-
+// x+3 : Endereço de x[3] 
+// *(x+3) : Primeiro elemento da quarta linha, que é 10
+// *(x+2)+3 : Rndreço que não corresponde um valor no array
