@@ -1,3 +1,6 @@
+/* 17. O que é memory leak? Crie um exemplo de programa em C que contenha um memory leak e
+proponha uma correção para o mesmo. */
+
 #include <stdio.h>
 #include <stdlib.h>
 
