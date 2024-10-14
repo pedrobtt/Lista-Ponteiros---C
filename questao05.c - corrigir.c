@@ -11,9 +11,15 @@ void funcao(char** str){
 
 int main(){
   char *str = (void *)malloc(50*sizeof(char));
-  strcpy(str, "Agostinho"); // A string não condiz com o que se pede
+  strcpy(str, "Agostinho"); 
   funcao(&str);
   puts(str);
   free(str);
   return 0;
 }
+
+/*
+A função "funcao! apenas incrementou uma cópia local do ponteiro str, mas não alterou a string
+original. Para modificar o conteúdo da string, seria necessário passar str diretamente e usar
+strcpy ou similar dentro da função
+*/
