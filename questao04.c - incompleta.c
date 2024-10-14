@@ -21,40 +21,48 @@ int main(void) {
 	p1 = &valor;
 	*p1 = 20;
 	printf("%d \n", valor);
-	// Altera o endereco atribuido para um conteudo, modificando o resultado para 20
+	// Retorna: 20
+	// Valor é inicialmente 10, mas é atualizado para 20 através do ponteiro p1.
 
 	/* (b) */
 	temp = 26.5;
 	p2 = &temp;
 	*p2 = 29.0;
 	printf("%.1f \n", temp);
-	// Caso parecido com a alternativa a, porC)m com variavel float
+	// Reetorna: 29.0
+	// temp é inicialmente 26.5, mas é atualizado para 29.0 através do ponteiro p2
 
 	/* (c) */
 	p3 = &nome[0];
 	aux = *p3;
 	printf("%c \n", aux);
-	// Imprime "p" pois a variavel aux recebe o conteudo do ponteiro p3
+	// Retorna: P
+	// p3 aponta para o início da string "Ponteiros", e aux recebe o primeiro caractere, que é P
 
 	/* (d) */
 	p3 = &nome[4];
 	aux = *p3;
 	printf("%c \n", aux);
-	// Imprime a quinta letra da palavra "Ponteiros", pois aux recebe o conteudo de p3
+	// Retorna: e
+	// p3 é atualizado para apontar para o quinto caractere da string (nome[4]), que é e
 
 	/* (e) */
 	p3 = nome;
 	printf("%c \n", *p3);
-	// Imprime a primeira letra da palavra "Ponteiros", pois *p3 retorna o conteudo de char
+	// Retorna: P
+	// p3 é reatribuído para apontar para o início de nome, logo *p3 retorna o primeiro caractere, P
 
 	/* (f) */
 	p3 = p3 + 4;
 	printf("%c \n", *p3);
-	// Imprime a letra "e" devido a soma do ponteiros retornarem o conteudo
+	// Retorna: e
+	// p3 é incrementado em 4, então agora aponta para o quinto caractere da string, que é e
 
 	/* (g) */
 	p3--;
 	printf("%c \n", *p3);
+	// Retorna: o
+	// p3 é decrementado para a posição anterior (que agora aponta para nome[3]), e *p3 retorna o
 
 	/* (h) */
 	vetor[0] = 31;
@@ -63,28 +71,41 @@ int main(void) {
 	p4 = vetor;
 	idade = *p4;
 	printf("%d \n", idade);
+	// Retorna: 31
+	// vetor[0] é definido como 31 e p4 aponta para o início do vetor
 
     /* (i) */
     p5 = p4 + 1;
     idade = *p5;
     printf("%d \n", idade);
+	// Retorna: 45
+	// p5 é incrementado para o próximo elemento (vetor[1]), que é 45
     
     /* (j) */
     p4 = p5 + 1;
     idade = *p4;
     printf("%d \n", idade);
+	// Retorna: 27
+	// p4 é ajustado para apontar para vetor[2], que contém 27
     
     /* (l) */
     p4 = p4 - 2;
     idade = *p4;
     printf("%d \n", idade);
+	// Retorna: 45
+	// p4 é decrementado para vetor[1], que é 45
     
     /* (m) */
     p5 = &vector[2] - 1;
     printf("%d \n", *p5);
+	// Retorna: 27
+	// p5 é ajustado para apontar para o elemento anterior de vetor[2], que é 27
     
     /* (n) */
     p5++;
     printf("%d \n", *p5);
+	// Retorna: 27
+	// p5 é incrementado, agora aponta para vetor[2], que contém 27
+	
     return(0);
 }
