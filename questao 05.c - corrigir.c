@@ -1,3 +1,6 @@
+/* 5. Um programador construiu o seguinte código e esperava na saída o texto gostinho, mas não
+obteve essa saída. Justifique o porquê de não ter obtido o resultado esperado. */
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
