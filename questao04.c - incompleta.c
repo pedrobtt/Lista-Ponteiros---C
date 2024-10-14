@@ -1,3 +1,6 @@
+/* 4. Determine o que será mostrado pelo seguinte program nos trechos (a) até (n). Compile-o,
+execute-o e verifique se foram obtidas as respostas esperadas. Justifique o porque de cada uma. */
+
 #include <stdio.h>
 
 int main(void) {
@@ -18,36 +21,36 @@ int main(void) {
 	p1 = &valor;
 	*p1 = 20;
 	printf("%d \n", valor);
-	// altera o endereco atribuido para um conteudo, modificando o resultado para 20
+	// Altera o endereco atribuido para um conteudo, modificando o resultado para 20
 
 	/* (b) */
 	temp = 26.5;
 	p2 = &temp;
 	*p2 = 29.0;
 	printf("%.1f \n", temp);
-	// caso parecido com a alternativa a, porC)m com variavel float
+	// Caso parecido com a alternativa a, porC)m com variavel float
 
 	/* (c) */
 	p3 = &nome[0];
 	aux = *p3;
 	printf("%c \n", aux);
-	// imprime "p" pois a variavel aux recebe o conteudo do ponteiro p3
+	// Imprime "p" pois a variavel aux recebe o conteudo do ponteiro p3
 
 	/* (d) */
 	p3 = &nome[4];
 	aux = *p3;
 	printf("%c \n", aux);
-	// imprime a quinta letra da palavra "Ponteiros", pois aux recebe o conteudo de p3
+	// Imprime a quinta letra da palavra "Ponteiros", pois aux recebe o conteudo de p3
 
 	/* (e) */
 	p3 = nome;
 	printf("%c \n", *p3);
-	// imprime a primeira letra da palavra "Ponteiros", pois *p3 retorna o conteudo de char
+	// Imprime a primeira letra da palavra "Ponteiros", pois *p3 retorna o conteudo de char
 
 	/* (f) */
 	p3 = p3 + 4;
 	printf("%c \n", *p3);
-	// imprime a letra "e" devido a soma do ponteiros retornarem o conteudo
+	// Imprime a letra "e" devido a soma do ponteiros retornarem o conteudo
 
 	/* (g) */
 	p3--;
