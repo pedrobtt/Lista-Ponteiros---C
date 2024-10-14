@@ -1,6 +1,5 @@
-/* 19. Implemente em linguagem C uma função em um programa de computador que leia n valores do
-tipo float do teclado e os apresente em ordem crescente. Utilize alocação dinâmica de memória
-para armazenar o conjunto de pontos lidos. */
+/* 20. Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu
+código, explicando o que faz cada uma das linhas. */
 
 #include <stdio.h>
 #include <stdlib.h>
