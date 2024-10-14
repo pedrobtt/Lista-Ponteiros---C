@@ -1,4 +1,6 @@
-
+/* 11. Um programador pretendia armazenar em um struct (acessível através de um ponteiro) o nome
+de um usuário e um valor inteiro associado e preparou o seguinte programa. Há algum erro
+presente no código? Se sim, qual é ele e como pode ser corrigido? */
 
 /*
 struct teste{
