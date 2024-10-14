@@ -1,27 +1,32 @@
+/* 21. Utilize a ideia do ponteiro para fun√ß√£o pela fun√ß√£o qsort() para implementar sua pr√≥pria
+fun√ß√£o de ordena√ß√£o, mas que seja capaz de ordenar apenas inteiros do tipo int. Para isso, sua
+fun√ß√£o dever√° receber, entre outros argumentos, um ponteiro para a fun√ß√£o de compara√ß√£o
+que determinar√° como os elementos do array ser√£o ordenados. */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-// FunÁ„o de comparaÁ„o para ordem crescente
+// Fun√ß√£o de compara√ß√£o para ordem crescente
 int comparaCrescente(const void *a, const void *b) {
     int valor1 = *(int *)a;
     int valor2 = *(int *)b;
     return (valor1 - valor2); // Retorna negativo se valor1 < valor2, 0 se forem iguais, positivo se valor1 > valor2
 }
 
-// FunÁ„o de comparaÁ„o para ordem decrescente
+// Fun√ß√£o de compara√ß√£o para ordem decrescente
 int comparaDecrescente(const void *a, const void *b) {
     int valor1 = *(int *)a;
     int valor2 = *(int *)b;
     return (valor2 - valor1); // Retorna negativo se valor2 < valor1 (invertido)
 }
 
-// FunÁ„o de ordenaÁ„o genÈrica semelhante ao qsort
+// Fun√ß√£o de ordena√ß√£o gen√©rica semelhante ao qsort
 void minhaSort(void *base, size_t num, size_t size, int (*compar)(const void *, const void *)) {
     char *arr = (char *)base;
     char temp[size];
     for (size_t i = 0; i < num - 1; i++) {
         for (size_t j = 0; j < num - 1 - i; j++) {
-            // Comparando os elementos adjacentes usando a funÁ„o de comparaÁ„o
+            // Comparando os elementos adjacentes usando a fun√ß√£o de compara√ß√£o
             if (compar(arr + j * size, arr + (j + 1) * size) > 0) {
                 // Troca os elementos se estiverem fora de ordem
                 memcpy(temp, arr + j * size, size);
@@ -35,7 +40,7 @@ void minhaSort(void *base, size_t num, size_t size, int (*compar)(const void *, 
 int main() {
     int n;
 
-    // Solicita o n˙mero de elementos a serem ordenados
+    // Solicita o n√∫mero de elementos a serem ordenados
     printf("Digite o numero de elementos: ");
     scanf("%d", &n);
 
@@ -45,13 +50,13 @@ int main() {
         return 1;
     }
 
-    // LÍ os valores do usu·rio
+    // L√™ os valores do usu√°rio
     printf("Digite os %d valores:\n", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &valores[i]);
     }
 
-    // Pergunta ao usu·rio o tipo de ordenaÁ„o
+    // Pergunta ao usu√°rio o tipo de ordena√ß√£o
     int opcao;
     printf("Escolha a ordem de ordenacao: 1 para crescente, 2 para decrescente: ");
     scanf("%d", &opcao);
@@ -75,7 +80,7 @@ int main() {
     }
     printf("\n");
 
-    // Libera a memÛria alocada
+    // Libera a mem√≥ria alocada
     free(valores);
 
     return 0;
