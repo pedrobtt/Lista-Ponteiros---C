@@ -1,3 +1,5 @@
+// 14. Justifique porque a saída do seguinte programa é mostrado o valor 22
+
 #include <stdio.h>
 
 int f(int a, int *pb, int **ppc){
@@ -19,6 +21,4 @@ void main(){
     getchar();
 }
 
-/*
-    A chamada da função global no printf na função main irá retorna 8 (a) + 8 (b) + 6 (c) = 22
-*/
+// A chamada da função global no printf na função main irá retorna 8 (a) + 8 (b) + 6 (c) = 22
