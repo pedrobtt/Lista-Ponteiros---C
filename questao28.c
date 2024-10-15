@@ -1,3 +1,6 @@
+/* 28. Considere o exemplo seguinte. Compile-o, execute-o e JUSTIFI, usando os recursos que julgar
+necessários, porque o programa imprime o resultado que imprime. */
+
 #include <stdio.h>
 
 char *a[] = {"AGOSTINHO", "MEDEIROS", "BRITO", "JUNIOR"};
