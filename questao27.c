@@ -1,3 +1,18 @@
+/* 27. (ENADE, 2021) Observe o código abaixo escrito na linguagem C
+
+I. O resultado da impressão na linha 24 é: 7 - 7.
+II. A função funcao1(), no pior caso, é uma estratégia mais rápida do que a função funcao2().
+III. A função funcao2() implementa uma estratégia iterativa na concepção do algoritmo.
+É correto o que se afirma em:
+
+a. I, apenas.
+b. III, apenas.
+c. I e II, apenas.
+d. II e III, apenas.
+e. I, II e III.
+
+Justifique sua resposta. */
+
 #include <stdio.h>
 #define TAM 10
 
@@ -39,7 +54,9 @@ I - Verdadeiro: A funcao1 percorre o vetor até encontrar o valor 15 (posição 
 logo retorna 7. A funcao2 realiza uma busca binaria no mesmo vetor, com v = 15 
 e busca posições entre 0 a 9, o valor 15 também é encontrado na posição 7.
 
-II - falso: A busca binária (funcao2) é mais rápida no pior caso.
+II - Falso: A busca binária (funcao2) é mais rápida no pior caso.
 
-III - falso: A funcao2 implementa uma estratégia recursiva, e não iterativa 
+III - Falso: A funcao2 implementa uma estratégia recursiva, e não iterativa.
 */
+
+// Portanto, a alternativa "a" é a correta.
